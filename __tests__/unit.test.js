@@ -63,12 +63,12 @@ test('strongPassFalse2', () => {
 })
 
 test('DateTrue1', () => {
-    let date = '12 / 23 / 2001';
+    let date = '12/23/2001';
     expect(functions.isDate(date)).toBe(true);
 })
 
 test('DateTrue2', () => {
-    let date = '01 / 01 / 1290';
+    let date = '01/01/1290';
     expect(functions.isDate(date)).toBe(true);
 })
 
@@ -80,4 +80,24 @@ test('DateFalse1', () => {
 test('DateFalse2', () => {
     let date = '11/123/2001';
     expect(functions.isDate(date)).toBe(false);
+})
+
+test('hexColorTrue1', () => {
+    let hex = 'A1B1C1';
+    expect(functions.isHexColor(hex)).toBe(true);
+})
+
+test('hexColorTrue2', () => {
+    let hex = '011199';
+    expect(functions.isHexColor(hex)).toBe(true);
+})
+
+test('hexColorFalse1', () => {
+    let hex = '00001';
+    expect(functions.isHexColor(hex)).toBe(false);
+})
+
+test('hexColorFalse2', () => {
+    let hex = 'Y288888';
+    expect(functions.isHexColor(hex)).toBe(false);
 })
