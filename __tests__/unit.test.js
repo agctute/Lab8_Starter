@@ -22,4 +22,23 @@ test('isPhoneNumberfalse2', () => {
     expect(functions.isPhoneNumber(phone)).toBe(false);
 })
 
+test('isEmailtrue1', () => {
+    let email = 'emailaddress@yahoo.com';
+    expect(functions.isEmail(email)).toBe(true);
+})
+
+test('isEmailtrue2', () => {
+    let email = 's@gmail.com';
+    expect(functions.isEmail(email)).toBe(true);
+})
+
+test('isEmailfalse1', () => {
+    let email = 'gmail.com';
+    expect(functions.isEmail(email)).toBe(false);
+})
+
+test('isEmailtrue2', () => {
+    let email = 's@';
+    expect(functions.isEmail(email)).toBe(false);
+})
 
