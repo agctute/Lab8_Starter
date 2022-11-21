@@ -61,3 +61,23 @@ test('strongPassFalse2', () => {
     let pass = 'a';
     expect(functions.isStrongPassword(pass)).toBe(false);
 })
+
+test('DateTrue1', () => {
+    let date = '12 / 23 / 2001';
+    expect(functions.isDate(date)).toBe(true);
+})
+
+test('DateTrue2', () => {
+    let date = '01 / 01 / 1290';
+    expect(functions.isDate(date)).toBe(true);
+})
+
+test('DateFalse1', () => {
+    let date = 'lll12 / 23 / 2001';
+    expect(functions.isDate(date)).toBe(false);
+})
+
+test('DateFalse2', () => {
+    let date = '11/123/2001';
+    expect(functions.isDate(date)).toBe(false);
+})
