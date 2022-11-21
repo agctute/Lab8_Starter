@@ -42,3 +42,22 @@ test('isEmailtrue2', () => {
     expect(functions.isEmail(email)).toBe(false);
 })
 
+test('strongPassTrue1', () => {
+    let pass = 'Chumhead';
+    expect(functions.isStrongPassword(pass)).toBe(true);
+})
+
+test('strongPassTrue2', () => {
+    let pass = 'C541258684amb';
+    expect(functions.isStrongPassword(pass)).toBe(true);
+})
+
+test('strongPassFalse1', () => {
+    let pass = '123';
+    expect(functions.isStrongPassword(pass)).toBe(false);
+})
+
+test('strongPassFalse2', () => {
+    let pass = 'a';
+    expect(functions.isStrongPassword(pass)).toBe(false);
+})
